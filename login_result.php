@@ -30,7 +30,7 @@
         <h2>登入結果</h2>
         <?php
         $correctAccount = "admin";
-        $correctPassword = "12345678";
+        $correctPassword = "999";
 
         if (isset($_POST['account']) && isset($_POST['password'])) {
             $account = trim($_POST['account']);
