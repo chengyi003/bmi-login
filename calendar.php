@@ -1,8 +1,12 @@
 <?php
 
 echo '<script>
-    if(!confirm("以下畫面可能會瑟瑟  請問你滿18了嗎?")) {
-        window.location.href = "https://tw.yahoo.com";
+    if (document.cookie.indexOf("is_adult=true") === -1) {
+        if(!confirm("以下畫面可能會瑟瑟  請問你滿18了嗎?")) {
+            window.location.href = "https://tw.yahoo.com";
+        } else {
+            document.cookie = "is_adult=true; max-age=86400; path=/";
+        }
     }
 </script>';
 
